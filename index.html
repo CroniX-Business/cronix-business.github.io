@@ -19,7 +19,9 @@
       <img src="" id="modalImage" alt="Modal Image" class="modal-content" />
     </div>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light shadow bg-body rounded"
+    >
       <div class="container-fluid">
         <button
           class="navbar-toggler"
@@ -49,50 +51,69 @@
       </div>
     </nav>
 
-    <div class="hero-top">
-      <img
-        src="https://picsum.photos/200"
-        alt="image"
-        width="500"
-        height="300"
-        class="image rounded-3 ms-5"
-        onclick="openModal('https://picsum.photos/400')"
-      />
+    <div class="hero-top container-fluid">
+      <div class="d-flex flex-column justify-content-center align-items-center">
+        <div class="text-center mt-5">
+          <img
+            src="./Petar/Assets/face.jpeg"
+            alt="Placeholder Image"
+            class="img-fluid rounded-3 "
+          />
+        </div>
+        <div class="text-center mt-3">
+          <ul class="list-unstyled text-start ms-2 text-light">
+            <li>Ime i Prezime: <span class="fw-bold">Petar Ruškan</span></li>
+            <li class="mt-2">
+              Godina i mjesto rođenja:
+              <span class="fw-bold"
+                >04.07.2002 |
+                <a
+                  href="https://novagradiska.hr"
+                  target="_blank"
+                  class="text-light"
+                  >Nova Gradiška</a
+                ></span
+              >
+            </li>
+            <li class="mt-2">
+              Trenutno obrazovanje:
+              <span class="fw-bold"
+                ><a
+                  href="https://www.ferit.unios.hr"
+                  target="_blank"
+                  class="text-light"
+                  >Fakultet elektrotehnike, računarstva i tehnologije</a
+                ></span
+              >
+            </li>
+            <li class="mt-2">
+              Hobiji:
+              <span class="fw-bold"
+                ><a
+                  href="https://hr.wikipedia.org/wiki/Računalno_programiranje"
+                  target="_blank"
+                  class="text-light"
+                  >Programiranje</a
+                >, Čitanje knjiga,
+                <a
+                  href="https://hr.wikipedia.org/wiki/Nogomet"
+                  target="_blank"
+                  class="text-light"
+                  >Nogomet</a
+                >
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
 
-    <div class="hero-middle-1 d-flex align-items-stretch">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-6 mt-5 text-center">
-            <span>asdsasdasdasdasdasd</span>
-          </div>
-          <div class="col-md-6 mt-5 justify-content-center align-items-center">
-            <div class="row">
-              <div class="col text-center ">
-                <img
-                  src="https://picsum.photos/200"
-                  alt="image"
-                  width="500"
-                  height="300"
-                  class="rounded-3 ms-5"
-                  onclick="openModal('https://picsum.photos/400')"
-                />
-              </div>
-            </div>
-            <div class="row mt-3 ">
-              <div class="col text-center ">
-                <img
-                  src="https://picsum.photos/200"
-                  alt="image"
-                  width="500"
-                  height="300"
-                  class="rounded-3 ms-5"
-                  onclick="openModal('https://picsum.photos/400')"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="hero-middle container-fluid">
+      <div class="d-flex flex-column justify-content-center align-items-center mt-3">
+        <span class="fw-bold fs-1">OBRAZOVANJE</span>
+      </div>
+      <div class="d-flex flex-column justify-content-start align-items-start ms-5 mt-5">
+        <span class="fw-bold fs-1">OBRAZOVANJE</span>
       </div>
     </div>
 
@@ -104,3 +125,14 @@
     <script src="./Petar/script-petar.js"></script>
   </body>
 </html>
+
+<!--
+  <img
+                  src="https://picsum.photos/200"
+                  alt="image"
+                  width="500"
+                  height="300"
+                  class="rounded-3 ms-5"
+                  onclick="openModal('https://picsum.photos/400')"
+                />
+ -->

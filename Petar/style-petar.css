@@ -1,15 +1,17 @@
 .hero-top {
-    height: 700px;
-    background-color: #112627;
+    /* background-color: #284b63; */
+    background: linear-gradient(to right,
+            #284b63 0%,
+            #284b63 30%,
+            rgb(61, 141, 141) 70%,
+            rgb(61, 141, 141) 100%);
+    box-shadow: 1px 10px 8px #aeaeae;
+    min-height: 60vh;
 }
 
-.hero-middle-1 {
-    height: 700px;
-    background-color: #2D5B4E;
-}
-
-.image {
-    margin-top: 200px;
+.hero-middle {
+    background-color: d9d9d9;
+    min-height: 60vh;
 }
 
 .modal {
