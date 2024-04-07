@@ -1,3 +1,8 @@
+body {
+    height: 50%;
+    min-width: 400px;
+}
+
 .hero-top {
     background: linear-gradient(to right,
             #284b63 0%,
@@ -5,7 +10,6 @@
             rgb(61, 141, 141) 70%,
             rgb(61, 141, 141) 100%);
     box-shadow: 1px 10px 8px #aeaeae;
-    min-height: 60vh;
 }
 
 .hero-middle {
