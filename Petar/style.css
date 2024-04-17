@@ -75,6 +75,10 @@ body {
     cursor: pointer;
 }
 
+.hero-middle-3 .shadow-content {
+    background: #284b63
+}
+
 .timeline {
     border-left: 1px solid hsl(0, 0%, 90%);
     list-style: none;
