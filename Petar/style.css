@@ -1,10 +1,10 @@
 body {
-    height: 100svh;
+    height: 60%;
     min-width: 400px;
 }
 
 .hero-top {
-    height: 70%;
+    min-height: 550px;
     background: linear-gradient(to right,
             #284b63 0%,
             #284b63 30%,
