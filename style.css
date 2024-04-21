@@ -1,0 +1,23 @@
+body {
+    background: linear-gradient(to right,
+            #284b63 0%,
+            #284b63 30%,
+            rgb(61, 141, 141) 70%,
+            rgb(61, 141, 141) 100%);
+}
+
+img {
+    border-radius: 50%;
+    border: solid 5px black;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+a, a:hover {
+    text-decoration: none;
+    color: white;
+}

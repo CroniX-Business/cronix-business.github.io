@@ -9,22 +9,10 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="Petar/style.css" />
-    <link rel="icon" type="image/x-icon" href="Petar/Assets/favicon.ico">
-    <title>Petar Ruškan | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>Studenti | Portfolio</title>
   </head>
-
   <body>
-    <div id="imageResize" class="modal">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <img
-        src=""
-        id="modalImage"
-        alt="Modal Image"
-        class="modal-content"
-      />
-    </div>
-
     <nav
       class="navbar navbar-expand-lg navbar-light bg-light shadow bg-body rounded sticky-top"
     >
@@ -43,7 +31,12 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"
+                <a class="nav-link active" aria-current="page" href="../index.html"
+                  >Početna</a
+                >
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Petar/petar_ruskan.html"
                 >Peta Ruškan</a
               >
             </li>
@@ -58,372 +51,34 @@
     </nav>
 
     <div
-      class="hero-top container-fluid d-flex justify-content-center align-items-center"
+      class="container d-flex justify-content-center align-items-center vh-100"
     >
-      <div
-        class="d-flex flex-xl-row flex-column justify-content-center align-items-center"
-      >
-        <div class="text-center mt-5 order-xl-2 mb-3 order-1">
-          <img
-            src="./Petar/Assets/slika-1.jpg"
-            alt="Placeholder Image"
-            class="img-fluid rounded-3 ms-5 mb-0 mb-md-5 "
-            width="350"
-            height="350"
-            onclick="openModal('./Petar/Assets/slika-1.jpg')"
-          />
-        </div>
-        <div class="text-center me-5 order-1">
-          <ul class="list-unstyled text-start text-light">
-            <li class="fw-bold fs-1 font-monospace">Petar Ruškan</li>
-            <hr />
-            <li class="mt-3 fw-bold fs-4">
-              04.07.2002 |
-              <a
-                href="https://novagradiska.hr"
-                target="_blank"
-                class="text-light"
-                >Nova Gradiška</a
-              >
-            </li>
-            <li class="mt-3 fs-4">
-              Trenutno obrazovanje:
-              <span class="fw-bold"
-                ><a
-                  href="https://www.ferit.unios.hr"
-                  target="_blank"
-                  class="text-light"
-                  >Fakultet elektrotehnike, računarstva i informacijski
-                  tehnologija</a
-                ></span
-              >
-            </li>
-            <li class="mt-2 fs-4">
-              Hobiji:
-              <span class="fw-bold"
-                ><a
-                  href="https://github.com/CroniX-Business"
-                  target="_blank"
-                  class="text-light"
-                  >Programiranje,</a
-                >
-                <a
-                  href="https://www.facebook.com/sloga.ng"
-                  target="_blank"
-                  class="text-light"
-                  >Nogomet</a
-                ></span
-              >
-            </li>
-            <li class="mt-2 fs-4">
-              <audio controls>
-                <source src="Petar/Assets/audio.mp3" type="audio/mpeg" />
-              </audio>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="hero-middle container-fluid">
-      <div class="row mt-5 align-items-center">
-        <div class="col-lg-6">
-          <div class="d-flex justify-content-center">
-            <div class="text-center mt-1">
-              <ul class="list-unstyled text-start text-black">
-                <li class="mt-5 fs-5 shadow p-3 mb-5 rounded">
-                  Osnovna škola:
-                  <span class="fw-bold">
-                    <a
-                      href="http://os-mlovrak-ng.skole.hr"
-                      target="_blank"
-                      class="text-black"
-                      >Mato Lovrak</a
-                    >
-                  </span>
-                </li>
-                <li class="mt-3 fs-5 shadow p-3 mb-5 rounded">
-                  Srednja škola:
-                  <span class="fw-bold">
-                    <a
-                      href="https://gimnazija-nova-gradiska.skole.hr"
-                      target="_blank"
-                      class="text-black"
-                      >Opća Gimnazija Nova Gradiška</a
-                    >
-                  </span>
-                </li>
-                <li class="mt-3 fs-5 shadow p-3 mb-5 rounded">
-                  Fakultet:
-                  <span class="fw-bold">
-                    <a
-                      href="https://www.ferit.unios.hr"
-                      target="_blank"
-                      class="text-black"
-                      >Fakultet elektrotehnike, računarstva i informacijskih
-                      tehnologija</a
-                    >
-                  </span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="text-center mt-3">
-            <iframe
-              width="100%"
-              height="450"
-              src="https://www.youtube.com/embed/8hCBOkqqQCQ?si=F7wUIyMWAU0Kg7yl&amp;start=10"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-          </div>
-        </div>
-      </div>
-      <hr class="mt-5" />
-    </div>
-
-    <div class="hero-middle-2 container-fluid">
-      <div class="row align-items-center">
-        <div class="col-lg-6">
-          <div class="d-flex justify-content-center">
-            <div class="shadow-content text-center mt-1 shadow p-3 rounded">
-              <div class="container text-white">
-                <h2 class="fs-1"><u>Frontend</u></h2>
-                <div class="tab-content">
-                  <ul class="list-unstyled text-start">
-                    <li class="mt-4">
-                      <b>HTML / CSS</b>: Kreiram responzivna, estetski privlačna
-                      korisnička sučelja.
-                    </li>
-                    <li class="mt-2">
-                      <b>JavaScript</b>: Razvijam dinamičke i interaktivne
-                      funkcionalnosti koje poboljšavaju korisničko iskustvo.
-                    </li>
-                    <li class="mt-2">
-                      <b>Angular</b>: Koristim Angular za izradu modernih, modularnih
-                      korisničkih sučelja.
-                    </li>
-                    <li class="mt-2">
-                    <b>Bootstrap / Tailwind</b>: Ubrzavam proces razvoja koristeći
-                      Bootstrap ili Tailwind za brzu izgradnju responzivnih web
-                      stranica.
-                    </li>
-                  </ul>
-                </div>
-
-                <h2 class="fs-1"><u>Backend</u></h2>
-                <div class="tab-content">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <ul class="types list-unstyled">
-                        <a href="https://www.learn-c.org"
-                          ><li
-                            class="text-uppercase shadow p-2 mb-2 rounded text-dark"
-                          >
-                            C
-                          </li></a
-                        >
-                        <a
-                          href="https://docs.oracle.com/javase/tutorial/index.html"
-                          ><li
-                            class="text-uppercase shadow p-2 mb-2 rounded text-dark"
-                          >
-                            Java
-                          </li></a
-                        >
-                        <a href="https://www.python.org"
-                          ><li
-                            class="text-uppercase shadow p-2 mb-2 rounded text-dark"
-                          >
-                            Python/ML
-                          </li></a
-                        >
-                        <a href="https://www.typescriptlang.org"
-                          ><li
-                            class="text-uppercase shadow p-2 mb-2 rounded text-dark"
-                          >
-                            Typescript
-                          </li></a
-                        >
-                      </ul>
-                    </div>
-                    <div class="col-md-6">
-                      <ul class="types list-unstyled">
-                        <a href="https://kotlinlang.org"
-                          ><li
-                            class="text-uppercase shadow p-2 mb-2 rounded text-dark"
-                          >
-                            Kotlin
-                          </li></a
-                        >
-                        <a href="https://nodejs.org/en"
-                          ><li
-                            class="text-uppercase shadow p-2 mb-2 rounded text-dark"
-                          >
-                            Node.js
-                          </li></a
-                        >
-                        <a href="https://expressjs.com"
-                          ><li
-                            class="text-uppercase shadow p-2 mb-2 rounded text-dark"
-                          >
-                            Express.js
-                          </li></a
-                        >
-                        <a href="https://www.mongodb.com"
-                          ><li
-                            class="text-uppercase shadow p-2 mb-2 rounded text-dark"
-                          >
-                            MongoDB
-                          </li></a
-                        >
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="text-center mt-3">
-            <img
-              src="./Petar/Assets/slika-2.bmp"
+      <div class="text-center">
+        <div class="d-inline-block me-5">
+          <a href="Petar/petar_ruskan.html"
+            ><img
+              src="./Petar/Assets/slika-1.jpg"
               alt="Placeholder Image"
-              class="img-fluid rounded-3 shadow"
-              width="400"
-              height="250"
-              onclick="openModal('./Petar/Assets/slika-2.bmp')"
-            />
-          </div>
-        </div>
-      </div>
-      <hr class="mt-5" />
-    </div>
-
-    <div class="hero-middle-3 container-fluid">
-      <div class="row mt-5 align-items-center">
-        <div class="col-lg-6">
-          <div class="d-flex justify-content-center">
-            <div class="shadow-content text-center mt-1 shadow p-3 rounded">
-              <div class="container text-white">
-                <section class="py-5">
-                  <ul class="timeline position-relative">
-                    <li class="timeline-item mb-5">
-                      <h5 class="fw-bold">Projekat u C-u - 1.godina</h5>
-                      <p class="mb-2 fw-bold">2022</p>
-                      <p>
-                        Prodavnica parfema koja omogućava dodavanje, brisanje,
-                        ažuriranje podataka te traženje parfema po određenim
-                        parametrima
-                      </p>
-                    </li>
-
-                    <li class="timeline-item mb-5">
-                      <h5 class="fw-bold">Čitač brojila za plin - 2.godina</h5>
-                      <p class="mb-2 fw-bold">2022</p>
-                      <p>
-                        Ovaj projekt koristi tehnike strojnog učenja za
-                        automatsko očitavanje plinomjera. Proces uključuje
-                        osposobljavanje modela YOLOv8 za otkrivanje dijela
-                        mjerača koji sadrži brojeve, nakon čega slijedi
-                        izdvajanje tog dijela i propuštanje kroz PaddleOCR za
-                        prepoznavanje znamenki. Cijeli sustav je umotan u
-                        Streamlit web aplikaciju za laku upotrebljivost.
-                        <br>
-                        Pravljeno u timu sa kolegom <a href="">Ivanom Berlančićem</a>
-                      </p>
-                    </li>
-
-                    <li class="timeline-item mb-5">
-                      <h5 class="fw-bold">Web aplikacija - 3.godna</h5>
-                      <p class="mb-2 fw-bold">2024</p>
-                      <p>
-                        Ovo je jednostavna Todo web aplikacija izgrađena
-                        korištenjem Node.js, Express.js, MongoDB Atlas i
-                        Tailwind CSS za sučelje. Korisnici mogu dodati zadatke
-                        koje moraju izvršiti i rasporediti ih za sljedećih 10
-                        dana. Administratorski korisnik ima funkcije CRUD
-                        (Create, Read, Update, Delete) i može se kreirati putem
-                        terminala pomoću npm pokretanja createAdmin.
-                      </p>
-                    </li>
-
-                    <li class="timeline-item mb-5">
-                      <h5 class="fw-bold">Mobilna aplikacija</h5>
-                      <p class="mb-2 fw-bold">2024</p>
-                      <p>Aplikacija je u razmatranju i pravljenju</p>
-                    </li>
-                  </ul>
-                </section>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="mt-4 mb-5 text-center">
-            <img
-              src="./Petar/Assets/slika-3.gif"
-              alt="Placeholder Image"
-              class="img-fluid rounded-3 shadow mb-sm-5"
+              class="img-fluid"
               width="350"
-              height="450"
-              onclick="openModal('./Petar/Assets/slika-3.gif')"
+              height="350"
             />
-            <img
-              src="./Petar/Assets/slika-4.png"
-              alt="Placeholder Image"
-              class="img-fluid rounded-3 shadow ms-3 "
-              width="350"
-              height="500"
-              onclick="openModal('./Petar/Assets/slika-4.png')"
-            />
-          </div>
-        </div>
-      </div>
-      <hr class="mt-5" />
-    </div>
-
-    <div class="container">
-      <footer
-        class="d-flex flex-row justify-content-center align-items-center py-2 my-1 border-top"
-      >
-        <span class="mb-2 mb-md-0 text-muted">
-          &copy; 2024 Web stranica izrađena za vrijeme pohađanja
-          <a href="https://www.ferit.unios.hr"
-            >Elektrotehničkog fakulteta u Osijeku</a
-          >
-          u sklopu kolegija
-          <a
-            href="https://www.ferit.unios.hr/upisi-i-studiji/strucni-prijediplomski-studiji#racunarstvo#SR6-02"
-          >
-            Multimedijska tehnika
+            <p class="fw-bold fs-3 mt-3">Petar Ruškan</p>
           </a>
-        </span>
-      </footer>
+        </div>
+        <div class="d-inline-block">
+          <a href="Tvrtko/index.html"
+            ><img
+              src="./Petar/Assets/slika-1.jpg"
+              alt="Placeholder Image"
+              class="img-fluid"
+              width="350"
+              height="350"
+            />
+            <p class="fw-bold fs-3 mt-3">Tvtko Slobođanac</p></a
+          >
+        </div>
+      </div>
     </div>
-
-    <script
-      src=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-    <script src="Petar/script.js"></script>
   </body>
 </html>
-
-<!--
-  <img
-                  src="https://picsum.photos/200"
-                  alt="image"
-                  width="500"
-                  height="300"
-                  class="rounded-3 ms-5"
-                  onclick="openModal('https://picsum.photos/400')"
-                />
- -->
