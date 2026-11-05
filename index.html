@@ -1,383 +1,423 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
+    <title>Petar Ruškan | Software Engineer</title>
+    <meta
+      name="description"
+      content="Petar Ruškan – software engineer. C, C++, C#, .NET, web i mobilne aplikacije."
     />
-    <link rel="stylesheet" href="/Petar/style.css" />
-    <link rel="icon" type="image/x-icon" href="/Petar/Assets/favicon.ico" />
-    <title>Petar Ruškan | Portfolio</title>
+    <meta name="theme-color" content="#0f1a22" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <script>
+      // Apply saved theme before paint to avoid a flash
+      document.documentElement.classList.add("js");
+      try {
+        const t = localStorage.getItem("theme");
+        if (t) document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    </script>
   </head>
 
   <body>
-    <div id="imageResize" class="modal">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <img src="" id="modalImage" alt="Modal Image" class="modal-content" />
-    </div>
+    <a class="skip-link" href="#main">Preskoči na sadržaj</a>
 
-    <div
-      class="hero-top container-fluid d-flex justify-content-center align-items-center"
-    >
-      <div
-        class="d-flex flex-xl-row flex-column justify-content-center align-items-center"
-      >
-        <div class="text-center mt-5 order-xl-2 mb-3 order-1">
-          <img
-            src="Petar/Assets/slika-1.jpg"
-            alt="Placeholder Image"
-            class="img-fluid rounded-3 ms-5 mb-0 mb-md-5"
-            width="350"
-            height="350"
-            onclick="openModal('/Petar/Assets/slika-1.jpg')"
-          />
-        </div>
-        <div class="text-center me-5 order-1">
-          <ul class="list-unstyled text-start text-light">
-            <li class="fw-bold fs-1 font-monospace">Petar Ruškan</li>
-            <hr />
-            <li class="mt-3 fw-bold fs-4">
-              04.07.2002 |
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#top" class="brand" aria-label="Početak">
+          <span class="brand-mark">PR</span>
+          <span class="brand-name">Petar Ruškan</span>
+        </a>
+
+        <nav class="nav" aria-label="Glavna navigacija">
+          <a href="#o-meni">O meni</a>
+          <a href="#vjestine">Vještine</a>
+          <a href="#projekti">Projekti</a>
+          <a href="#kontakt">Kontakt</a>
+        </nav>
+
+        <button class="theme-toggle" type="button" aria-label="Promijeni temu">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"
+            />
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Hero -->
+      <section class="hero" id="top">
+        <div class="container hero-grid">
+          <div class="hero-text reveal">
+            <p class="eyebrow">// software engineer</p>
+            <h1>Petar Ruškan</h1>
+            <p class="lead">
+              Pišem u C-u, C++-u i C#-u. Najviše me zanimaju sistemsko
+              programiranje, alati i održavanje legacy koda na životu – a usput
+              gradim web i mobilne aplikacije.
+            </p>
+            <div class="hero-actions">
+              <a href="#projekti" class="btn btn-primary">Pogledaj projekte</a>
               <a
-                href="https://novagradiska.hr"
+                href="https://github.com/CroniX-Business"
+                class="btn btn-ghost"
                 target="_blank"
-                class="text-light"
-                >Nova Gradiška</a
+                rel="noopener"
               >
-            </li>
-            <li class="mt-3 fs-4">
-              Trenutno obrazovanje:
-              <span class="fw-bold"
-                ><a
-                  href="https://www.ferit.unios.hr"
-                  target="_blank"
-                  class="text-light"
-                  >Fakultet elektrotehnike, računarstva i informacijski
-                  tehnologija</a
-                ></span
+                <svg viewBox="0 0 24 24" aria-hidden="true" class="btn-icon">
+                  <path
+                    d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"
+                  />
+                </svg>
+                GitHub
+              </a>
+              <a
+                href="https://www.linkedin.com/in/petar-ru%C5%A1kan/"
+                class="btn btn-ghost"
+                target="_blank"
+                rel="noopener"
               >
-            </li>
-            <li class="mt-2 fs-4">
-              Hobiji:
-              <span class="fw-bold"
-                ><a
-                  href="https://github.com/CroniX-Business"
-                  target="_blank"
-                  class="text-light"
-                  >Programiranje,</a
-                >
-                <a
-                  href="https://www.facebook.com/sloga.ng"
-                  target="_blank"
-                  class="text-light"
-                  >Nogomet</a
-                ></span
-              >
-            </li>
+                <svg viewBox="0 0 24 24" aria-hidden="true" class="btn-icon">
+                  <path
+                    d="M20.4 2H3.6A1.6 1.6 0 0 0 2 3.6v16.8A1.6 1.6 0 0 0 3.6 22h16.8a1.6 1.6 0 0 0 1.6-1.6V3.6A1.6 1.6 0 0 0 20.4 2zM8 19H5V9.5h3V19zM6.5 8.2a1.7 1.7 0 1 1 0-3.5 1.7 1.7 0 0 1 0 3.5zM19 19h-3v-4.6c0-1.1 0-2.5-1.5-2.5s-1.8 1.2-1.8 2.400V19h-3V9.5h2.900v1.300c.4-.8 1.4-1.6 2.9-1.6 3.1 0 3.6 2 3.6 4.700V19z"
+                  />
+                </svg>
+                LinkedIn
+              </a>
+            </div>
+          </div>
+
+          <figure class="hero-photo reveal">
+            <img
+              src="assets/petar.jpg"
+              alt="Petar Ruškan radi na laptopu"
+              width="720"
+              height="960"
+            />
+          </figure>
+        </div>
+
+        <div class="container">
+          <ul class="facts reveal">
+            <li><strong>7</strong><span>projekata na GitHubu</span></li>
+            <li><strong>C · C++ · C#</strong><span>glavni jezici</span></li>
+            <li><strong>.NET</strong><span>&amp; SQL Server</span></li>
           </ul>
         </div>
-      </div>
-    </div>
+      </section>
 
-    <div class="hero-middle container-fluid">
-      <div class="row mt-5 align-items-center">
-        <div class="col-lg-6">
-          <div class="d-flex justify-content-center">
-            <div class="text-center mt-1">
-              <ul class="list-unstyled text-start text-black">
-                <li class="mt-5 fs-5 shadow p-3 mb-5 rounded">
-                  Osnovna škola:
-                  <span class="fw-bold">
-                    <a
-                      href="http://os-mlovrak-ng.skole.hr"
-                      target="_blank"
-                      class="text-black"
-                      >Mato Lovrak</a
-                    >
-                  </span>
-                </li>
-                <li class="mt-3 fs-5 shadow p-3 mb-5 rounded">
-                  Srednja škola:
-                  <span class="fw-bold">
-                    <a
-                      href="https://gimnazija-nova-gradiska.skole.hr"
-                      target="_blank"
-                      class="text-black"
-                      >Opća Gimnazija Nova Gradiška</a
-                    >
-                  </span>
-                </li>
-                <li class="mt-3 fs-5 shadow p-3 mb-5 rounded">
-                  Fakultet:
-                  <span class="fw-bold">
-                    <a
-                      href="https://www.ferit.unios.hr"
-                      target="_blank"
-                      class="text-black"
-                      >Fakultet elektrotehnike, računarstva i informacijskih
-                      tehnologija</a
-                    >
-                  </span>
-                </li>
+      <!-- About -->
+      <section class="section" id="o-meni">
+        <div class="container about-grid">
+          <div class="reveal">
+            <h2 class="section-title"><span>01</span> O meni</h2>
+            <p>
+              Software engineer iz Hrvatske. Podloga mi je studij računarstva
+              na Fakultetu elektrotehnike, računarstva i informacijskih
+              tehnologija u Osijeku, gdje sam radio na svemu od konzolnih
+              aplikacija u C-u do računalnog vida i mobilnog razvoja.
+            </p>
+            <p>
+              Danas se najviše bavim C/C++/C# ekosustavom i .NET-om – volim
+              alate, sistemske stvari i čišćenje starog koda tako da i dalje
+              pouzdano radi. Kad nisam za računalom, najčešće sam na
+              nogometnom terenu.
+            </p>
+          </div>
+
+          <ol class="timeline reveal" aria-label="Iskustvo i obrazovanje">
+            <li>
+              <p class="tl-meta">Praksa · 2024</p>
+              <h3>Danieli Systec</h3>
+              <p>
+                REST API za narudžbe u restoranima u C#/.NET 8 i Angular
+                frontend.
+              </p>
+            </li>
+            <li>
+              <p class="tl-meta">Obrazovanje</p>
+              <h3>Računarstvo · FERIT Osijek</h3>
+              <p>
+                Fakultet elektrotehnike, računarstva i informacijskih
+                tehnologija.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="section" id="vjestine">
+        <div class="container">
+          <h2 class="section-title reveal"><span>02</span> Vještine</h2>
+
+          <div class="skills-grid">
+            <article class="card reveal">
+              <h3>Jezici</h3>
+              <ul class="chips">
+                <li class="chip-strong">C</li>
+                <li class="chip-strong">C++</li>
+                <li class="chip-strong">C#</li>
+                <li>TypeScript</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>Kotlin</li>
+                <li>Java</li>
               </ul>
-            </div>
+            </article>
+
+            <article class="card reveal">
+              <h3>Backend &amp; podaci</h3>
+              <ul class="chips">
+                <li class="chip-strong">.NET / ASP.NET Core</li>
+                <li>Entity Framework</li>
+                <li class="chip-strong">SQL Server</li>
+                <li>Node.js</li>
+                <li>Express.js</li>
+                <li>NestJS</li>
+                <li>MongoDB</li>
+              </ul>
+            </article>
+
+            <article class="card reveal">
+              <h3>Frontend &amp; mobilno</h3>
+              <ul class="chips">
+                <li>Angular</li>
+                <li>HTML / CSS</li>
+                <li>Tailwind</li>
+                <li>Bootstrap</li>
+                <li>Android · Jetpack Compose</li>
+                <li>Firebase</li>
+              </ul>
+            </article>
+
+            <article class="card reveal">
+              <h3>Alati &amp; ML</h3>
+              <ul class="chips">
+                <li>Git</li>
+                <li>Visual Studio</li>
+                <li>NUnit</li>
+                <li>YOLOv8</li>
+                <li>PaddleOCR</li>
+                <li>Streamlit</li>
+              </ul>
+            </article>
           </div>
         </div>
-        <div class="col-lg-6">
-          <div class="text-center mt-3">
-            <iframe
-              width="100%"
-              height="450"
-              src="https://www.youtube.com/embed/8hCBOkqqQCQ?si=F7wUIyMWAU0Kg7yl&amp;start=10"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-          </div>
-        </div>
-      </div>
-      <hr class="mt-5" />
-    </div>
+      </section>
 
-    <div class="hero-middle-2 container-fluid">
-      <div class="row align-items-center">
-        <div class="col-lg-6">
-          <div class="d-flex justify-content-center">
-            <div class="shadow-content text-center mt-1 shadow p-3 rounded">
-              <div class="container text-white">
-                <h2 class="fs-1"><u>Frontend</u></h2>
-                <div class="tab-content">
-                  <ul class="list-unstyled text-start">
-                    <li class="mt-4">
-                      <b>HTML / CSS</b>: Kreiram responzivna, estetski privlačna
-                      korisnička sučelja.
-                    </li>
-                    <li class="mt-2">
-                      <b>JavaScript</b>: Razvijam dinamičke i interaktivne
-                      funkcionalnosti koje poboljšavaju korisničko iskustvo.
-                    </li>
-                    <li class="mt-2">
-                      <b>Angular</b>: Koristim Angular za izradu modernih,
-                      modularnih korisničkih sučelja.
-                    </li>
-                    <li class="mt-2">
-                      <b>Bootstrap / Tailwind</b>: Ubrzavam proces razvoja
-                      koristeći Bootstrap ili Tailwind za brzu izgradnju
-                      responzivnih web stranica.
-                    </li>
-                  </ul>
-                </div>
-
-                <h2 class="fs-1"><u>Backend</u></h2>
-                <div class="tab-content">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <ul class="types list-unstyled">
-                        <a href="https://www.learn-c.org"
-                          ><li
-                            class="text-uppercase shadow p-2 mb-2 rounded text-dark"
-                          >
-                            C
-                          </li></a
-                        >
-                        <a
-                          href="https://docs.oracle.com/javase/tutorial/index.html"
-                          ><li
-                            class="text-uppercase shadow p-2 mb-2 rounded text-dark"
-                          >
-                            Java
-                          </li></a
-                        >
-                        <a href="https://www.python.org"
-                          ><li
-                            class="text-uppercase shadow p-2 mb-2 rounded text-dark"
-                          >
-                            Python/ML
-                          </li></a
-                        >
-                        <a href="https://www.typescriptlang.org"
-                          ><li
-                            class="text-uppercase shadow p-2 mb-2 rounded text-dark"
-                          >
-                            Typescript
-                          </li></a
-                        >
-                      </ul>
-                    </div>
-                    <div class="col-md-6">
-                      <ul class="types list-unstyled">
-                        <a href="https://kotlinlang.org"
-                          ><li
-                            class="text-uppercase shadow p-2 mb-2 rounded text-dark"
-                          >
-                            Kotlin
-                          </li></a
-                        >
-                        <a href="https://nodejs.org/en"
-                          ><li
-                            class="text-uppercase shadow p-2 mb-2 rounded text-dark"
-                          >
-                            Node.js
-                          </li></a
-                        >
-                        <a href="https://expressjs.com"
-                          ><li
-                            class="text-uppercase shadow p-2 mb-2 rounded text-dark"
-                          >
-                            Express.js
-                          </li></a
-                        >
-                        <a href="https://www.mongodb.com"
-                          ><li
-                            class="text-uppercase shadow p-2 mb-2 rounded text-dark"
-                          >
-                            MongoDB
-                          </li></a
-                        >
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="text-center mt-3">
-            <img
-              src="Petar/Assets/slika-2.bmp"
-              alt="Placeholder Image"
-              class="img-fluid rounded-3 shadow"
-              width="400"
-              height="250"
-              onclick="openModal('Petar/Assets/slika-2.bmp')"
-            />
-          </div>
-        </div>
-      </div>
-      <hr class="mt-5" />
-    </div>
-
-    <div class="hero-middle-3 container-fluid">
-      <div class="row mt-5 align-items-center">
-        <div class="col-lg-6">
-          <div class="d-flex justify-content-center">
-            <div class="shadow-content text-center mt-1 shadow p-3 rounded">
-              <div class="container text-white">
-                <section class="py-5">
-                  <ul class="timeline position-relative">
-                    <li class="timeline-item mb-5">
-                      <h5 class="fw-bold">Projekat u C-u - 1.godina</h5>
-                      <p class="mb-2 fw-bold">2022</p>
-                      <p>
-                        Prodavnica parfema koja omogućava dodavanje, brisanje,
-                        ažuriranje podataka te traženje parfema po određenim
-                        parametrima
-                      </p>
-                    </li>
-
-                    <li class="timeline-item mb-5">
-                      <h5 class="fw-bold">Čitač brojila za plin - 2.godina</h5>
-                      <p class="mb-2 fw-bold">2022</p>
-                      <p>
-                        Ovaj projekt koristi tehnike strojnog učenja za
-                        automatsko očitavanje plinomjera. Proces uključuje
-                        osposobljavanje modela YOLOv8 za otkrivanje dijela
-                        mjerača koji sadrži brojeve, nakon čega slijedi
-                        izdvajanje tog dijela i propuštanje kroz PaddleOCR za
-                        prepoznavanje znamenki. Cijeli sustav je umotan u
-                        Streamlit web aplikaciju za laku upotrebljivost.
-                      </p>
-                    </li>
-
-                    <li class="timeline-item mb-5">
-                      <h5 class="fw-bold">Web aplikacija - 3.godna</h5>
-                      <p class="mb-2 fw-bold">2024</p>
-                      <p>
-                        Ovo je jednostavna Todo web aplikacija izgrađena
-                        korištenjem Node.js, Express.js, MongoDB Atlas i
-                        Tailwind CSS za sučelje. Korisnici mogu dodati zadatke
-                        koje moraju izvršiti i rasporediti ih za sljedećih 10
-                        dana. Administratorski korisnik ima funkcije CRUD
-                        (Create, Read, Update, Delete) i može se kreirati putem
-                        terminala pomoću npm pokretanja createAdmin.
-                      </p>
-                    </li>
-
-                    <li class=" student timeline-item mb-5">
-                      <h5 class="fw-bold">Mobilna aplikacija</h5>
-                      <p class="mb-2 fw-bold">2024</p>
-                      <p>Aplikacija je u razmatranju i pravljenju</p>
-                    </li>
-                  </ul>
-                </section>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="mt-4 mb-5 text-center">
-            <img
-              src="Petar/Assets/slika-3.gif"
-              alt="Placeholder Image"
-              class="img-fluid rounded-3 shadow mb-sm-5"
-              width="350"
-              height="450"
-              onclick="openModal('Petar/Assets/slika-3.gif')"
-            />
-            <img
-              src="Petar/Assets/slika-4.png"
-              alt="Placeholder Image"
-              class="img-fluid rounded-3 shadow ms-3"
-              width="350"
-              height="500"
-              onclick="openModal('Petar/Assets/slika-4.png')"
-            />
-          </div>
-          <div
-            class="studenti container-sm border rounded-2 text-center w-50"
-          >
-            <h5 class="fw-bold text-white">Stranice ostalih studenata</h5>
-            <a href="https://ivan-berlancic.github.io" class="text-white"
-              >Ivan Berlančić</a
+      <!-- Projects -->
+      <section class="section" id="projekti">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2 class="section-title"><span>03</span> Projekti</h2>
+            <a
+              class="link-arrow"
+              href="https://github.com/CroniX-Business?tab=repositories"
+              target="_blank"
+              rel="noopener"
+              >Svi repozitoriji →</a
             >
-            <a href="https://arac222.github.io/CVSite/luka_aracic.html" class="text-white">Luka Aračić</a>
+          </div>
+
+          <div class="projects">
+            <article class="project reveal">
+              <p class="project-meta">2025 · Full-stack</p>
+              <h3>Nextrip</h3>
+              <p>
+                Planer putovanja koji generira izlete prema tvojim
+                preferencijama. Putovanja se mogu spremiti, uređivati i izvesti
+                izravno u Google Maps.
+              </p>
+              <ul class="tags">
+                <li>TypeScript</li>
+                <li>Angular</li>
+                <li>NestJS</li>
+                <li>MongoDB</li>
+              </ul>
+              <a
+                class="project-link"
+                href="https://github.com/CroniX-Business/NEXTRIP"
+                target="_blank"
+                rel="noopener"
+                >Kod na GitHubu →</a
+              >
+            </article>
+
+            <article class="project reveal">
+              <p class="project-meta">2024 · Praksa · Backend</p>
+              <h3>Orders API</h3>
+              <p>
+                REST API za restorane, kategorije, artikle, kupce i narudžbe.
+                Validacija ulaza, mapiranje DTO-a, logiranje i unit testovi.
+                Uz njega i
+                <a
+                  href="https://github.com/CroniX-Business/Praksa-Danieli-Systec-Frontend"
+                  target="_blank"
+                  rel="noopener"
+                  >Angular frontend</a
+                >.
+              </p>
+              <ul class="tags">
+                <li>C#</li>
+                <li>.NET 8</li>
+                <li>EF Core</li>
+                <li>SQL Server</li>
+                <li>FluentValidation</li>
+                <li>NUnit</li>
+              </ul>
+              <a
+                class="project-link"
+                href="https://github.com/CroniX-Business/Praksa-Danieli-Systec-Backend"
+                target="_blank"
+                rel="noopener"
+                >Kod na GitHubu →</a
+              >
+            </article>
+
+            <article class="project reveal">
+              <p class="project-meta">2024 · Mobilno</p>
+              <h3>Tierbnb</h3>
+              <p>
+                Android aplikacija za najam automobila: registracija i prijava,
+                pregled i detalji vozila, rezervacije te prikaz na karti.
+              </p>
+              <ul class="tags">
+                <li>Kotlin</li>
+                <li>Jetpack Compose</li>
+                <li>Firebase</li>
+                <li>Google Maps</li>
+              </ul>
+              <a
+                class="project-link"
+                href="https://github.com/CroniX-Business/Tierbnb"
+                target="_blank"
+                rel="noopener"
+                >Kod na GitHubu →</a
+              >
+            </article>
+
+            <article class="project reveal">
+              <p class="project-meta">2024 · Strojno učenje · ★ 3</p>
+              <h3>Čitač plinomjera</h3>
+              <p>
+                YOLOv8 model pronalazi brojčanik na fotografiji plinomjera,
+                izreže ga, a PaddleOCR prepoznaje znamenke. Sve je zapakirano u
+                jednostavnu Streamlit web aplikaciju.
+              </p>
+              <ul class="tags">
+                <li>Python</li>
+                <li>YOLOv8</li>
+                <li>PaddleOCR</li>
+                <li>Streamlit</li>
+              </ul>
+              <a
+                class="project-link"
+                href="https://github.com/CroniX-Business/Gas-Meter-Reading"
+                target="_blank"
+                rel="noopener"
+                >Kod na GitHubu →</a
+              >
+            </article>
+
+            <article class="project reveal">
+              <p class="project-meta">2024 · Web</p>
+              <h3>Todo web aplikacija</h3>
+              <p>
+                Planiranje zadataka do 10 dana unaprijed. Administrator ima pune
+                CRUD ovlasti i može postaviti dnevni limit zadataka po
+                korisniku.
+              </p>
+              <ul class="tags">
+                <li>Node.js</li>
+                <li>Express.js</li>
+                <li>MongoDB Atlas</li>
+                <li>Tailwind CSS</li>
+              </ul>
+              <a
+                class="project-link"
+                href="https://github.com/CroniX-Business/Todo-Web-App"
+                target="_blank"
+                rel="noopener"
+                >Kod na GitHubu →</a
+              >
+            </article>
+
+            <article class="project reveal">
+              <p class="project-meta">Programiranje 2 · FERIT</p>
+              <h3>Prodavaonica parfema</h3>
+              <p>
+                Konzolna aplikacija za upravljanje podacima: dodavanje,
+                brisanje i izmjena zapisa, spremanje u binarnu datoteku te
+                pretraga i sortiranje po parametrima.
+              </p>
+              <ul class="tags">
+                <li>C</li>
+              </ul>
+              <a
+                class="project-link"
+                href="https://github.com/CroniX-Business/Perfume-Store"
+                target="_blank"
+                rel="noopener"
+                >Kod na GitHubu →</a
+              >
+            </article>
           </div>
         </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section" id="kontakt">
+        <div class="container narrow">
+          <div class="contact reveal">
+            <h2 class="section-title"><span>04</span> Kontakt</h2>
+            <p>
+              Najlakše me pronaći preko GitHuba ili LinkedIna. Slobodno
+              pogledaj kod ili mi pošalji poruku.
+            </p>
+            <div class="hero-actions center">
+              <a
+                href="https://github.com/CroniX-Business"
+                class="btn btn-primary"
+                target="_blank"
+                rel="noopener"
+                >GitHub</a
+              >
+              <a
+                href="https://www.linkedin.com/in/petar-ru%C5%A1kan/"
+                class="btn btn-ghost"
+                target="_blank"
+                rel="noopener"
+                >LinkedIn</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year">2026</span> Petar Ruškan</p>
       </div>
-      <hr class="mt-5" />
-    </div>
+    </footer>
 
-    <div class="container">
-      <footer
-        class="d-flex flex-row justify-content-center align-items-center py-2 my-1 border-top"
-      >
-        <span class="mb-2 mb-md-0 text-muted">
-          &copy; 2024 Web stranica izrađena za vrijeme pohađanja
-          <a href="https://www.ferit.unios.hr"
-            >Elektrotehničkog fakulteta u Osijeku</a
-          >
-          u sklopu kolegija
-          <a
-            href="https://www.ferit.unios.hr/upisi-i-studiji/strucni-prijediplomski-studiji#racunarstvo#SR6-02"
-          >
-            Multimedijska tehnika
-          </a>
-        </span>
-      </footer>
-    </div>
-
-    <script
-      src=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-    <script src="/Petar/script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
